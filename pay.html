@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/pay.css">
+		<script src="../js/rem.js"></script>
+
+	</head>
+
+	<body>
+		<section class="main">
+			<div class="logo"></div>
+			<p class="tittle"></p>
+			<section class="pay">
+				<span class="payT">支付金额</span>
+				<span class="payN">￥</span>
+				<div id="input"></div>
+			</section>
+			<input type="hidden" value="01" class="scannl" />
+
+			<p class="fTitle">muzimushui技术支持</p>
+		</section>
+		<script src="js/jq.js"></script>
+	
+		<script src="js/keyBoard.js"></script>
+		<script>
+			var key = new keyBoard('#input', {
+				decimal: 2,
+				integer: 5,
+				btnCallBack: function(num) {
+					console.log(num)
+				}
+			})
+		</script>
+	</body>
+
+</html>
